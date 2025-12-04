@@ -3,7 +3,7 @@ from discord.ext import commands
 from openai import OpenAI
 
 # ====== NHÉT KEY VÀO ĐÂY ======
-DISCORD_TOKEN = "MTQ0NjAwNDM1NjE2NzIzNzY2NA.GfE5vP.U3oIbpZ0c-waQSHni0PBwPBtu5Cqo_DzsGxUCQ"
+DISCORD_TOKEN = "MTQ0NjAwNDM1NjE2NzIzNzY2NA.GRUF3W.2-LL0hnWAsxxVBrx5t1foTfeCefvEatD-3j4Fw"
 OPENAI_KEY = "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"
 # ==============================
 
