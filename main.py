@@ -1,11 +1,13 @@
 import discord
 from discord.ext import commands
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
 
-# ====== NHÉT KEY VÀO ĐÂY ======
-DISCORD_TOKEN = "MTQ0NjAwNDM1NjE2NzIzNzY2NA.GRUF3W.2-LL0hnWAsxxVBrx5t1foTfeCefvEatD-3j4Fw"
-OPENAI_KEY = "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"
-# ==============================
+# Load biến môi trường
+load_dotenv()
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
+OPENAI_KEY = os.getenv("OPENAI_KEY")
 
 client_ai = OpenAI(api_key=OPENAI_KEY)
 
@@ -24,7 +26,6 @@ async def on_message(message):
     if message.author == bot.user:
         return
 
-    # trigger: bot được tag hoặc dùng !ask
     if bot.user.mentioned_in(message) or message.content.startswith("!ask"):
         user_text = (
             message.content.replace(f"<@{bot.user.id}>", "")
